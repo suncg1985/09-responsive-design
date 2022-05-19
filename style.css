@@ -1,0 +1,131 @@
+body {
+    background-color: rgba(1, 22, 21, 0.027);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: brown;
+    /* body自带默认的margin和padding，需要手动设置才能把边缘全部置零 */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+background-color: black;
+padding: 20px;
+height: 300px;
+color: white;
+background-image: url('images/gnr.jpg');
+position: relative;
+background-size: 100%;
+background-position: center;
+text-align: center;
+}
+
+header h1 {
+padding: 0;
+text-align: left;
+}
+
+header ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+header ul li {
+display: inline-block;
+margin: 0 20 0 0;
+/* background-color: rgb(245, 245, 210); */
+border-radius: 3px;
+}
+
+header .mobile {
+    display: none;
+}
+
+@media screen and (max-width: 632px) {
+    header {
+        height: 250px;
+        background-position: -20px 70px;
+        background-repeat: no-repeat;
+    }
+    header .mobile {
+        display: inline-block;
+    }
+    header .desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        height: 200px;
+        background-position: -20px 70px;
+        background-repeat: no-repeat;
+    }
+
+}
+
+header li:hover {
+/* background-color: rgb(203, 236, 213); */
+text-decoration: underline;
+}
+
+header li a {
+color: rgb(233, 229, 229);
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin-top: 60px;
+padding: 15px;
+}
+
+
+header .logo a {
+background-image: url('images/logo.png');
+display: inline-block;
+background-size: 200px;
+background-repeat: no-repeat;
+background-position: bottom;
+width: 200px;
+height: 112.5px;
+top: -40px;
+position: relative;
+text-indent: -99999999999px;
+text-align: center;
+text-decoration: none;
+padding: 0;
+opacity: 0.6;
+}
+
+.feature {
+display: flex;
+flex-direction: row;
+/* height: 350px;
+margin-top: 50px;
+margin-bottom: 50px; */
+flex-wrap: wrap;
+padding: 20px;
+}
+
+.feature figure {
+margin: auto;
+width: 300px;
+height: 350px;
+padding-top: 5px;
+text-align: center;
+
+}
+
+.feature figure img {
+border: 1px solid white;
+width: 200px;
+height: 300px;
+border-radius: 50%;
+box-shadow: rgb(102, 100, 100) 0 0 10px;
+}
+
+footer {
+background: black;
+padding: 20px;
+}
+
+/* 需要学习srcset和picture标签知识 */
